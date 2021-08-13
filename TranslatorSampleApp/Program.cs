@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using TranslatorSampleApp.Models;
 
 namespace TranslatorSampleApp
 {
@@ -127,53 +128,5 @@ namespace TranslatorSampleApp
 
             return null;
         }
-    }
-
-
-    public class TranslationInput
-    {
-        public Input[] inputs { get; set; }
-    }
-
-    public class Input
-    {
-        public Source source { get; set; }
-        public Target[] targets { get; set; }
-    }
-
-    public class Source
-    {
-        public string sourceUrl { get; set; }
-        public string storageSource { get; set; }
-        public string language { get; set; }
-    }
-
-    public class Target
-    {
-        public string targetUrl { get; set; }
-        public string storageSource { get; set; }
-        public string category { get; set; }
-        public string language { get; set; }
-    }
-
-
-    public class TranslationJobStatus
-    {
-        public string id { get; set; }
-        public DateTime createdDateTimeUtc { get; set; }
-        public DateTime lastActionDateTimeUtc { get; set; }
-        public string status { get; set; }
-        public Summary summary { get; set; }
-    }
-
-    public class Summary
-    {
-        public int total { get; set; }
-        public int failed { get; set; }
-        public int success { get; set; }
-        public int inProgress { get; set; }
-        public int notYetStarted { get; set; }
-        public int cancelled { get; set; }
-        public int totalCharacterCharged { get; set; }
     }
 }
