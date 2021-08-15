@@ -9,7 +9,9 @@ you need to create Azure resources below.
 
 ## How to configure
 - Assign SAS for both source and target containers on your Azure Storage account. Pick up these SAS.
-- Pick up "endpoint" and "subscription key" from Azure Cognitive Service. 
+  - source container must have designated read and list access
+  - target container must have designated write and list access
+- Pick up "endpoint" of "Document Translation" and "subscription key" from Azure Cognitive Service. 
 
 ## Copyright
 <table>
